@@ -22,7 +22,7 @@ const hogsImg = {
     "Galaxy Note": galaxy_note,
     "Leggo My Eggo": leggo_my_eggo,
     "Peppa": peppa,
-    "Piggy Smalls": piggy_smalls,
+    "Piggy smalls": piggy_smalls,
     "Piglet": piglet,
     "Porkchop": porkchop, 
     "Trouble" : trouble,
@@ -41,18 +41,20 @@ function HogInfo({name, specialty, weight, greased, hog, src}){
     }
   
       return(
-          <div className="hogInfo">
-              <div className="ui eight wide column">
-                  <div className="pig_img">
+          
+              <div onClick ={changeDisplay} className="ui eight wide column">
+                  
                   <img src={hogsImg[name]} alt="image name" />
-                  </div>
-                  <h1 onClick ={changeDisplay} >Name: {name}</h1>
-                  {display ? <h4>{specialty}</h4> : null}
-                  {display ? <h4>{weight}</h4> : null}
-                  {display ? <h4>{greased}</h4> : null}                                   
+                  
+                  <h1  >Name: {name}</h1>
+                  {display ? <h4>specialty:{specialty}</h4> : null}
+                  {display ? <h4>weight:{weight}</h4> : null}
+                  {display ? <h4>greased?{greased}</h4> : null}                                   
              </div>
-          </div>
+        
       )
   }
 
   export default HogInfo;
+
+  

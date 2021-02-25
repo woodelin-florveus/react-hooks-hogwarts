@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import Nav from "./Nav";
 import HogGrid from './HogGrid'
 import HogFilter from './HogFilter'
-import HogSelect from './HogSelect'
+
 import hogs from "../porkers_data";
 
 function App() {
@@ -27,7 +27,9 @@ function App() {
         setName(nameFilter)
     }
 
-
+  function sortByName(){
+    hogs.name.sort()
+  }
 
 
   return (
@@ -35,7 +37,7 @@ function App() {
       <Nav />
       <HogGrid hogs ={filterHog} />
       <HogFilter handleFilter={handleClick} />
-      <HogSelect hogs={hogsName} handleSelectName={handleSelect} />
+      <button onClick ={sortByName}>sort by name</button>
     </div>
   );
 }

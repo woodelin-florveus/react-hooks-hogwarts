@@ -1,5 +1,3 @@
-
-
 function HogFilter({handleFilter}){
 
     function handleClick(event){
@@ -17,3 +15,4 @@ function HogFilter({handleFilter}){
 
 
 export default HogFilter;
+
