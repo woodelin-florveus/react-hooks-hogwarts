@@ -12,12 +12,13 @@ function HogGrid({hogs}){
             specialty={hog.specialty}
             weight={hog.weight}
             greased={hog.greased}
+            src={hog.name}
             />
         )
     })
 
     return(
-        <div className="ui grid containe">
+        <div className="ui grid container">
         {hogList}
         </div>
     )
