@@ -1,14 +1,28 @@
 
 
+function HogSelect({hogs, handleSelectName}){
 
-function HogSelect(props){
-
-    const allHogs = props.hogs.map((j) => {
-        return(<option>{j.name}</option>)
+    const selectHogs = hogs.map((hog) => {
+        return(
+            <option key={hog}>
+                {hog.name}
+            </option>
+        )
     })
-    return(
-        <select>{allHogs} </select>
-    )
+
+     
+    
+
+   return(
+    <select onChange={handleSelectName}>
+        {selectHogs}
+    </select>
+   )
 }
 
-export default HogSelect;
+
+
+
+
+
+export default HogSelect

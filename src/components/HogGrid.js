@@ -1,10 +1,10 @@
 
 import HogInfo from "./HogInfo"
 
-function HogGrid({hogs}){
+function HogGrid({hogs, handleFilter}){
 
     const hogList = hogs.map((hog) => {
-        console.log(hog)
+        // console.log(hog)
         return (
             <HogInfo 
             key={hog}
@@ -12,7 +12,7 @@ function HogGrid({hogs}){
             specialty={hog.specialty}
             weight={hog.weight}
             greased={hog.greased}
-            src={hog.name}
+            handleFilter={handleFilter}
             />
         )
     })
